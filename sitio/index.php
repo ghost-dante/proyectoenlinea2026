@@ -1,3 +1,28 @@
+<?php
+    $BDProductos = array(
+       array(1, 2, 3, 4, 5),
+       array("Blusa", "Lentes", "Playera", "Pantalon","Vestido"),
+       array(100, 350, 200, 420, 250),
+       array("Dama", "Caballero", "Caballero", "Dama", "Dama")
+    );
+    $iProductos = 5; //Indica el no. de Productos
+
+    $BDAlmacen = array(
+       array(1, 2, 3, 4, 5),
+       array(0, 10, 5, 15, 3)
+    );
+
+    $iAlmacen = 2; //El no. de Existencias
+
+    $BDAlmacen = array(
+       array(2, 3), //El ID del Producto
+       array(2, 1), //La cantidad
+       array(700, 200) //El Monto
+    );
+
+    $iVentas = 2;
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -49,7 +74,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.php"><img src="images/home/logoxshopper.png" alt="" /></a>
+							<a href="index.php"><img src="images/home/logoxshopper.png" alt="" width="339" height="139" /></a>
 		<H3>Proyecto de: Dante Alejandro y Fernanda Crolina</H3>
 		<H4>3ero Programacion Vesp</H4>
 						</div>						
@@ -164,13 +189,17 @@
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Catálogo de Productos</h2>
+                    <?php
+            for ($i=0; $i < $iProductos; $i++){
+                    ?>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="images/home/product1.jpg" alt="" />
-											<h2>$56</h2>
-											<p>Producto 1</p>
+								<?php $img = $BDProductos[0][$i];?>
+											<img src="images/home/<?php echo $img; ?>.jpg" alt="" width="210" height="180"/>
+											<h2><?php echo $BDProductos[2][$i];?></h2>
+											<p><?php echo $BDProductos[1][$i];?></p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
 										</div>
 										<div class="product-overlay">
@@ -183,7 +212,7 @@
 								</div>								
 							</div>
 						</div>
-						
+					<?php } ?>
 					</div><!--features_items-->
 					
 					
