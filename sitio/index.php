@@ -57,7 +57,7 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +52 618 1200 776</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i> +52 618 120 0776</a></li>
 								<li><a href="#"><i class="fa fa-envelope"></i> xshoppersupport@gmail.com</a></li>
 							</ul>
 						</div>
@@ -140,7 +140,7 @@
 						<div class="carousel-inner">
 							<div class="item active">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
+									<h1><span>X</span>-SHOPPER</h1>
 									<h2>Proyecto</h2>
 									<p>Software Punto de Venta de Ropa </p>								
 								</div>
@@ -174,7 +174,8 @@
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Categoría 1</a></h4>
+									<h4 class="panel-title"><a href="#">Damas</a></h4>
+									<h4 class="panel-title"><a href="#">Caballeros</a></h4>
 								</div>
 							</div>
 						</div><!--/category-products-->
@@ -204,7 +205,8 @@
 										</div>
 										<div class="product-overlay">
 											<div class="overlay-content">
-												<h2>$56</h2>
+								<h2><?php echo $BDProductos[2][$i]; ?></h2>
+								<p><?php echo $BDProductos[1][$i]; ?></p>
 												<p>Producto 1</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
 											</div>
